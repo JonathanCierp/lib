@@ -39,7 +39,8 @@ const colors = {
   default: {
     button:
       'text-gray-900 bg-white border-2 border-white hover:bg-gray-200 hover:border-gray-200 hover:text-black focus:ring-gray-200',
-    outlined: 'bg-transparent',
+    outlined:
+      'text-gray-700 bg-transparent border-2 border-gray-700 hover:bg-white hover:border-white hover:text-gray-700 focus:ring-white',
   },
   success: {
     button:
@@ -50,17 +51,20 @@ const colors = {
   error: {
     button:
       'text-white bg-red-700 border-2 border-red-700 hover:bg-red-800 hover:border-red-800 focus:ring-red-300',
-    outlined: 'bg-transparent',
+    outlined:
+      'text-red-700 bg-transparent border-2 border-red-700 hover:bg-red-700 hover:border-red-700 hover:text-white focus:ring-red-300',
   },
   info: {
     button:
       'text-white bg-blue-700 border-2 border-blue-700 hover:bg-blue-800 hover:border-blue-800 focus:ring-blue-300',
-    outlined: 'bg-transparent',
+    outlined:
+      'text-blue-700 bg-transparent border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-700 hover:text-white focus:ring-blue-300',
   },
   warning: {
     button:
       'text-white bg-orange-700 border-2 border-orange-700 hover:bg-orange-800 hover:border-orange-800 focus:ring-orange-300',
-    outlined: 'bg-transparent',
+    outlined:
+      'text-orange-700 bg-transparent border-2 border-orange-700 hover:bg-orange-700 hover:border-orange-700 hover:text-white focus:ring-orange-300',
   },
 }
 
