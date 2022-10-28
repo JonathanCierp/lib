@@ -2,6 +2,7 @@ import { App } from 'vue'
 import './index.css'
 import Plugin from './plugin'
 import BaseButton from './components/BaseButton/BaseButton.vue'
+import BaseIcon from './components/BaseIcon/BaseIcon.vue'
 
 interface AppOptions {
   autoImport: {
@@ -15,7 +16,7 @@ const defaultOptions: AppOptions = {
   },
 }
 
-const components = { BaseButton }
+const components = { BaseButton, BaseIcon }
 
 /**
  * It imports all the components in the `components` and `modules` directories, and registers them with
@@ -32,4 +33,4 @@ export default (app: App, options: AppOptions) => {
   }
 }
 
-export { BaseButton, Plugin }
+export { BaseButton, BaseIcon, Plugin }

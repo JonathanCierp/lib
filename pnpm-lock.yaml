@@ -21,8 +21,9 @@ importers:
 
   packages/ui:
     specifiers:
+      '@heroicons/vue': ^2.0.12
       '@rushstack/eslint-patch': ^1.2.0
-      '@types/node': ^18.11.2
+      '@types/node': 18.8.0
       '@vitejs/plugin-vue': ^3.1.2
       '@vue/eslint-config-prettier': ^7.0.0
       '@vue/eslint-config-typescript': ^11.0.2
@@ -37,10 +38,11 @@ importers:
       vue: ^3.2.41
       vue-tsc: ^1.0.8
     dependencies:
+      '@heroicons/vue': 2.0.12_vue@3.2.41
       vue: 3.2.41
     devDependencies:
       '@rushstack/eslint-patch': 1.2.0
-      '@types/node': 18.11.2
+      '@types/node': 18.8.0
       '@vitejs/plugin-vue': 3.1.2_vite@3.1.8+vue@3.2.41
       '@vue/eslint-config-prettier': 7.0.0_znq2sm4m5bonjw4qqm6mwhbe2q
       '@vue/eslint-config-typescript': 11.0.2_qsmcthc5ijamuzfurbvbpwqwnm
@@ -169,6 +171,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@heroicons/vue/2.0.12_vue@3.2.41:
+    resolution: {integrity: sha512-ypuQl/Wei7BoShO65AdRVikXDaSt6hJBRuKs2pVd/6HvxfEz18oXraH+J5G/QPIwObMEVhMb6nkOs9l3WZv/gA==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.2.41
+    dev: false
 
   /@histoire/app/0.11.5_vite@3.1.8:
     resolution: {integrity: sha512-qkcesIiJat7bjw7Tz5olFq1JTGOP5tVV5+ZO8UCkZsrgf+eadfLPMYNs7X6XUUTwsh4pZlUoQpwqTjau0CUa8A==}
@@ -355,6 +365,10 @@ packages:
 
   /@types/node/18.11.2:
     resolution: {integrity: sha512-BWN3M23gLO2jVG8g/XHIRFWiiV4/GckeFIqbU/C4V3xpoBBWSMk4OZomouN0wCkfQFPqgZikyLr7DOYDysIkkw==}
+    dev: true
+
+  /@types/node/18.8.0:
+    resolution: {integrity: sha512-u+h43R6U8xXDt2vzUaVP3VwjjLyOJk6uEciZS8OSyziUQGOwmk+l+4drxcsDboHXwyTaqS1INebghmWMRxq3LA==}
     dev: true
 
   /@types/node/8.10.66:
