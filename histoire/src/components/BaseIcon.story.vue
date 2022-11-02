@@ -2,18 +2,20 @@
   <Story title="BaseIcon">
     <Variant title="playground" :init-state="initState">
       <template #default="{ state }">
-        outline : <BaseIcon name="academic-cap" /> solid :
-        <BaseIcon name="academic-cap" type="solid" /> outline :
-        <BaseIcon name="arrow-path" /> solid :
-        <BaseIcon name="arrow-path" type="solid" /> outline :
-        <BaseIcon name="banknotes" /> solid :
-        <BaseIcon name="banknotes" type="solid" size="2" /> outline :
-        <BaseIcon name="video-camera" size="3" /> solid :
-        <BaseIcon name="video-camera" type="solid" size="4" />
+        <BaseIcon :name="state.name" :type="state.type" :size="state.size" />
       </template>
 
       <template #controls="{ state }">
-        <!-- <HstText v-model="state.label" title="Label" /> -->
+        <HstText v-model="state.name" title="Name" />
+        <HstSelect
+          v-model="state.type"
+          title="Type"
+          :options="[
+            { value: 'outline', label: 'outline' },
+            { value: 'solid', label: 'solid' },
+          ]"
+        />
+        <HstNumber v-model="state.size" title="Size" />
       </template>
     </Variant>
   </Story>
@@ -21,6 +23,10 @@
 
 <script setup lang="ts">
 const initState = () => {
-  return {}
+  return {
+    name: 'academic-cap',
+    type: 'outline',
+    size: 1.5,
+  }
 }
 </script>

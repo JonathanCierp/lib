@@ -1,8 +1,10 @@
 <template>
   <button
+    v-bind="$attrs"
     :type="type"
-    class="transition-all duration-100 text-center inline-flex items-center gap-4 focus:ring-1"
+    class="transition-all duration-100 text-center inline-flex items-center gap-4 focus:ring-2"
     :class="[roundedClass, outlinedClass, sizeClass, colorClass, disabledClass]"
+    @click="(e: Event) => emit('click', e)"
   >
     <template v-if="loading">
       <svg
@@ -78,18 +80,20 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
   color: COLORS.default,
 })
 
+const emit = defineEmits(['click'])
+
 const roundedClass = computed(() => (props.rounded ? 'rounded-full' : ''))
 const outlinedClass = computed(() =>
   props.outlined ? colors[props.color].outlined : ''
 )
-const sizeClass = computed(() => (props.size ? sizes[props.size].button : ''))
+const sizeClass = computed(() => (props.size ? sizes[props.size].base : ''))
 const sizeIconClass = computed(() => (props.size ? sizes[props.size].icon : ''))
 const colorClass = computed(() =>
-  !props.outlined ? colors[props.color].button : ''
+  !props.outlined ? colors[props.color].base : ''
 )
 const disabledClass = computed(() =>
   props.disabled
-    ? 'cursor-not-allowed bg-gray-50 opacity-20 border-0 !text-gray-700 !ring-0 hover:bg-gray-50'
+    ? 'cursor-not-allowed !bg-gray-500 !dark:bg-gray-50 opacity-20 border-0 !text-gray-900 !dark:text-gray-500 !ring-0 dark:hover:bg-gray-50 hover:bg-gray-500'
     : ''
 )
 // @TODO : To remove after progress circular component

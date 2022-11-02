@@ -1,41 +1,37 @@
 <template>
-  <Story title="BaseButton">
+  <Story title="BaseTag">
     <Variant title="playground" :init-state="initState">
       <template #default="{ state }">
-        <BaseButton
-          :label="state.label"
-          :icon-left="state.iconLeft"
-          :icon-right="state.iconRight"
-          :type="state.type"
+        <BaseTag
           :rounded="state.rounded"
+          :rounded-full="state.roundedFull"
           :outlined="state.outlined"
           :disabled="state.disabled"
-          :loading="state.loading"
-          :loading-text="state.loadingText"
           :size="state.size"
           :color="state.color"
-        />
+          :icon-left="state.iconLeft"
+          :icon-right="state.iconRight"
+          :link="state.link"
+          @click-left="logEvent('Click Left', $event)"
+          @click-right="logEvent('Click Right', $event)"
+        >
+          {{ state.content }}
+        </BaseTag>
       </template>
 
       <template #controls="{ state }">
-        <HstText v-model="state.label" title="Label" />
-        <HstText v-model="state.iconLeft" title="IconLeft" />
-        <HstText v-model="state.iconRight" title="IconRight" />
-        <HstText v-model="state.type" title="Type" />
+        <HstText v-model="state.content" title="Content" />
         <HstCheckbox v-model="state.rounded" title="Rounded" />
+        <HstCheckbox v-model="state.roundedFull" title="RoundedFull" />
         <HstCheckbox v-model="state.outlined" title="Outlined" />
         <HstCheckbox v-model="state.disabled" title="Disabled" />
-        <HstCheckbox v-model="state.loading" title="Loading" />
-        <HstText v-model="state.loadingText" title="loadingText" />
+        <HstCheckbox v-model="state.link" title="Link" />
         <HstSelect
           v-model="state.size"
           title="Size"
           :options="[
-            { value: 'xs', label: 'xs' },
             { value: 'sm', label: 'sm' },
-            { value: 'md', label: 'md' },
             { value: 'lg', label: 'lg' },
-            { value: 'xl', label: 'xl' },
           ]"
         />
         <HstSelect
@@ -49,25 +45,28 @@
             { value: 'warning', label: 'warning' },
           ]"
         />
+        <HstText v-model="state.iconLeft" title="iconLeft" />
+        <HstText v-model="state.iconRight" title="iconRight" />
       </template>
     </Variant>
   </Story>
 </template>
 
 <script setup lang="ts">
+import { logEvent } from 'histoire/client'
+
 const initState = () => {
   return {
-    label: 'Hello world',
-    iconLeft: '',
-    iconRight: '',
-    type: 'button',
+    content: 'Default',
     rounded: false,
+    roundedFull: false,
     outlined: false,
     disabled: false,
-    loading: false,
-    loadingText: 'Loading ...',
-    size: 'md',
-    color: 'success',
+    link: false,
+    size: 'sm',
+    color: 'default',
+    iconLeft: '',
+    iconRight: '',
   }
 }
 </script>

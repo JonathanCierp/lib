@@ -1,5 +1,7 @@
 <template>
-  <Component :is="iconName" :style="[iconSize]" />
+  <div>
+    <Component :is="iconName" :style="[iconSize]" v-bind="$attrs" />
+  </div>
 </template>
 
 <script setup lang="ts">
