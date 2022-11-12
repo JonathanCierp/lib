@@ -3,7 +3,7 @@
     v-if="!isDeleted"
     v-bind="$attrs"
     :is="componentTag"
-    class="inline-flex items-center gap-1 mr-2 px-2.5 py-0.5"
+    class="transition-all duration-200 inline-flex items-center gap-1 mr-2 px-2.5 py-0.5"
     :class="[
       roundedClass,
       roundedFullClass,

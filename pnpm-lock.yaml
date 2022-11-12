@@ -7,7 +7,7 @@ importers:
       '@histoire/plugin-vue': ^0.11.5
       '@vitejs/plugin-vue': ^3.1.2
       histoire: ^0.11.5
-      ui: workspace:0.0.0
+      ui: workspace:0.0.2
       vite: ^3.1.8
       vue: ^3.2.41
     dependencies:

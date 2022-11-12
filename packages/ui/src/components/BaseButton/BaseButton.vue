@@ -2,7 +2,7 @@
   <button
     v-bind="$attrs"
     :type="type"
-    class="transition-all duration-100 text-center inline-flex items-center gap-4 focus:ring-2"
+    class="transition-all duration-200 text-center inline-flex items-center gap-4 focus:ring-2"
     :class="[roundedClass, outlinedClass, sizeClass, colorClass, disabledClass]"
     @click="(e: Event) => emit('click', e)"
   >
