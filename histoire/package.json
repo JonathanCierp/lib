@@ -18,7 +18,7 @@
     "vite": "^3.1.8"
   },
   "dependencies": {
-    "ui": "workspace:0.0.3",
+    "ui": "workspace:0.0.4",
     "vue": "^3.2.41"
   }
 }
