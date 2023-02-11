@@ -1,13 +1,28 @@
 <template>
-  <div class="relative w-fit">
+  <div class="relative">
     <slot />
     <span
-      class="transition-transform duration-200 inline-flex items-center justify-center text-xs rounded-full absolute"
-      :class="[positionClass, colorClass, sizeClass, invisibleClass]"
+      class="flex items-center justify-center absolute border-white dark:border-gray-800 rounded-full border-2 text-xs transform"
+      :class="[colorClass, invisibleClass, positionClass, sizeClass]"
     >
       <slot v-if="!props.dot" name="content">{{ content }}</slot>
     </span>
   </div>
+  <!--  <div class="relative">-->
+  <!--    <span-->
+  <!--      class="top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"-->
+  <!--    ></span>-->
+  <!--  </div>-->
+  <!--  <br />-->
+  <!--  <div class="relative w-fit">-->
+  <!--    <slot />-->
+  <!--    <span-->
+  <!--      class="absolute bottom-0 left-8 transform translate-y-1/4 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"-->
+  <!--      :class="[sizeClass]"-->
+  <!--    >-->
+  <!--      <slot v-if="!props.dot" name="content">{{ content }}</slot>-->
+  <!--    </span>-->
+  <!--  </div>-->
 </template>
 
 <script setup lang="ts">
@@ -30,6 +45,7 @@ interface BaseButtonProps {
   invisible?: boolean
   showZero?: boolean
   max?: number
+  overlap?: 'rounded' | 'square'
 }
 
 const props = withDefaults(defineProps<BaseButtonProps>(), {
@@ -39,15 +55,17 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
   invisible: false,
   showZero: false,
   max: 99,
+  overlap: 'square',
 })
 
-const positionClass = computed(() => positions[props.position])
-const colorClass = computed(() => colors[props.color].base)
-const sizeClass = computed(() =>
-  props.dot
-    ? 'w-2 h-2 -m-1'
-    : 'min-w-[1.25rem] h-[1.25rem] px-1 border-2 border-white'
+const positionClass = computed(
+  () =>
+    `${positions[props.position].base} ${
+      positions[props.position][props.overlap][props.dot ? 'dot' : 'base']
+    }`
 )
+const colorClass = computed(() => colors[props.color].base)
+const sizeClass = computed(() => (props.dot ? 'w-3 h-3' : 'w-5 h-5'))
 const invisibleClass = computed(() => {
   if (
     props.invisible ||

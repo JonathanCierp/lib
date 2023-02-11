@@ -5,6 +5,7 @@ enum SIZES {
   lg = 'lg',
   xl = 'xl',
 }
+
 const sizes = {
   xs: {
     base: 'py-2 px-3 text-xs font-medium',
@@ -38,15 +39,97 @@ enum POSITIONS {
   left = 'left',
   top_left = 'top_left',
 }
+
 const positions = {
-  top: 'top-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
-  top_right: 'top-0 right-0 translate-x-1/2 -translate-y-1/2',
-  right: 'top-1/2 right-0 translate-x-1/2 -translate-y-1/2',
-  bottom_right: 'bottom-0 right-0 translate-x-1/2 translate-y-1/2',
-  bottom: 'bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2',
-  bottom_left: 'bottom-0 left-0 -translate-x-1/2 translate-y-1/2',
-  left: 'top-1/2 left-0 -translate-x-1/2 -translate-y-1/2',
-  top_left: 'top-0 left-0 -translate-x-1/2 -translate-y-1/2',
+  top: {
+    base: 'top-0',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
+  top_right: {
+    base: 'top-0 right-0',
+    rounded: {
+      base: 'translate-x-1 -translate-y-1.5',
+      dot: '-translate-x-0.5',
+    },
+    square: {
+      base: 'translate-x-1 -translate-y-1.5',
+      dot: 'translate-x-0.5 -translate-y-0.5',
+    },
+    // square: 'translate-x-0.5 -translate-y-0.5',  translate-x-2 -translate-y-2
+  },
+  right: {
+    base: '',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
+  bottom_right: {
+    base: '',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
+  bottom: {
+    base: '',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
+  bottom_left: {
+    base: '',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
+  left: {
+    base: '',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
+  top_left: {
+    base: '',
+    rounded: {
+      base: '',
+      dot: '',
+    },
+    square: {
+      base: '',
+      dot: '',
+    },
+  },
 }
 
 enum COLORS {
@@ -56,6 +139,7 @@ enum COLORS {
   info = 'info',
   warning = 'warning',
 }
+
 const colors = {
   default: {
     base: 'text-gray-900 bg-white',
