@@ -1,8 +1,10 @@
 import { App } from 'vue'
 import './index.css'
+import './components/BaseAnimation/BaseAnimation.css'
 import Plugin from './plugin'
 
 import BaseAlert from './components/BaseAlert/BaseAlert.vue'
+import BaseAnimation from './components/BaseAnimation/BaseAnimation.vue'
 import BaseAvatar from './components/BaseAvatar/BaseAvatar.vue'
 import BaseAvatarGroup from './components/BaseAvatar/BaseAvatarGroup.vue'
 import BaseBadge from './components/BaseBadge/BaseBadge.vue'
@@ -24,6 +26,7 @@ const defaultOptions: AppOptions = {
 
 const components = {
   BaseAlert,
+  BaseAnimation,
   BaseAvatar,
   BaseAvatarGroup,
   BaseBadge,
@@ -49,6 +52,7 @@ export default (app: App, options: AppOptions) => {
 
 export {
   BaseAlert,
+  BaseAnimation,
   BaseAvatar,
   BaseAvatarGroup,
   BaseBadge,

@@ -44,7 +44,7 @@ enum COLORS {
 
 const colors = {
   default: {
-    base: 'text-gray-900 bg-white border-2 border-white hover:bg-gray-200 hover:border-gray-200 hover:text-black focus:ring-gray-200',
+    base: 'text-gray-900 bg-gray-200 border-2 border-white hover:bg-gray-300 hover:border-gray-300 hover:text-black focus:ring-gray-200',
     outlined:
       'text-gray-700 bg-transparent border-2 border-gray-700 hover:bg-white hover:border-white hover:text-gray-700 focus:ring-white',
     text: '',
