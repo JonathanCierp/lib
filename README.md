@@ -2,13 +2,15 @@
 
 - [ ] Histoire
 - [ ] Test
+- [ ] Add animations on colors etc...
 
 - [ ] Accordion
 - [ ] Alert
     - [x] Bordered
     - [x] Outlined
-    - [ ] Dismiss
-    - [ ] Border accent
+    - [x] Dismiss
+    - [x] Border accent
+    - [ ] ADD ANIMATION ON DISMISS
 - [x] Avatar
     - [x] Rounded
     - [x] Rounded Full
