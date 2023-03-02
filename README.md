@@ -5,8 +5,8 @@
 
 - [ ] Accordion
 - [ ] Alert
-    - [ ] Bordered
-    - [ ] Outlined
+    - [x] Bordered
+    - [x] Outlined
     - [ ] Dismiss
     - [ ] Border accent
 - [x] Avatar
