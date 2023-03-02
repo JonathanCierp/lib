@@ -3,14 +3,19 @@
 - [ ] Histoire
 - [ ] Test
 
+- [ ] Accordion
 - [ ] Alert
+    - [ ] Bordered
+    - [ ] Outlined
+    - [ ] Dismiss
+    - [ ] Border accent
 - [x] Avatar
     - [x] Rounded
     - [x] Rounded Full
     - [x] Placeholder
     - [x] Letter
     - [x] Size (sm, md, lg)
-    - NEED TO DO THE POSITIONING OF OVERLAP
+    - [ ] NEED TO DO THE POSITIONING OF OVERLAP
 - [x] Avatar Group
     - [x] Max
 - [x] Badge

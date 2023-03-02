@@ -3,7 +3,15 @@
     v-bind="$attrs"
     :type="type"
     class="transition-all duration-200 text-center inline-flex items-center gap-4 focus:ring-2"
-    :class="[roundedClass, outlinedClass, sizeClass, colorClass, disabledClass]"
+    :class="[
+      roundedClass,
+      roundedFullClass,
+      outlinedClass,
+      sizeClass,
+      colorClass,
+      disabledClass,
+      textClass,
+    ]"
     @click="(e: Event) => emit('click', e)"
   >
     <template v-if="loading">
@@ -11,7 +19,7 @@
         aria-hidden="true"
         role="status"
         class="inline animate-spin"
-        :class="sizeIconClass"
+        :style="{ width: `${sizeIconClass}rem`, height: `${sizeIconClass}rem` }"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +39,7 @@
       <BaseIcon
         v-if="iconLeft"
         :name="iconLeft"
-        :class="sizeIconClass"
+        :size="sizeIconClass"
         fill="currentColor"
       />
       <slot>
@@ -40,7 +48,7 @@
       <BaseIcon
         v-if="iconRight"
         :name="iconRight"
-        :class="sizeIconClass"
+        :size="sizeIconClass"
         fill="currentColor"
       />
     </template>
@@ -58,11 +66,13 @@ interface BaseButtonProps {
   iconRight?: string
   type?: 'button' | 'submit' | 'reset' | undefined
   rounded?: boolean
+  roundedFull?: boolean
   outlined?: boolean
+  text?: boolean
   disabled?: boolean
   loading?: boolean
   loadingText?: string
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined
+  size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined
   color?: 'default' | 'success' | 'error' | 'info' | 'warning' | undefined
 }
 
@@ -73,6 +83,7 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
   type: 'button',
   rounded: false,
   outlined: false,
+  text: false,
   disabled: false,
   loading: false,
   loadingText: 'Loading ...',
@@ -82,14 +93,20 @@ const props = withDefaults(defineProps<BaseButtonProps>(), {
 
 const emit = defineEmits(['click'])
 
-const roundedClass = computed(() => (props.rounded ? 'rounded-full' : ''))
+const roundedClass = computed(() => (props.rounded ? 'rounded-lg' : ''))
+const roundedFullClass = computed(() =>
+  props.roundedFull ? 'rounded-full' : ''
+)
 const outlinedClass = computed(() =>
   props.outlined ? colors[props.color].outlined : ''
 )
+const textClass = computed(() => (props.text ? colors[props.color].text : ''))
 const sizeClass = computed(() => (props.size ? sizes[props.size].base : ''))
-const sizeIconClass = computed(() => (props.size ? sizes[props.size].icon : ''))
+const sizeIconClass = computed(() =>
+  props.size ? sizes[props.size].icon : 1.5
+)
 const colorClass = computed(() =>
-  !props.outlined ? colors[props.color].base : ''
+  !props.outlined && !props.text ? colors[props.color].base : ''
 )
 const disabledClass = computed(() =>
   props.disabled

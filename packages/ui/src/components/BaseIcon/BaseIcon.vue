@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Component :is="iconName" :style="[iconSize]" v-bind="$attrs" />
+  <div class="inline">
+    <Component :is="iconName" :style="[iconSize]" />
   </div>
 </template>
 

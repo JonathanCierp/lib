@@ -1,3 +1,6 @@
+.idea
+.vscode
+.DS_Store
 node_modules
 packages/test/node_modules
 packages/ui/node_modules

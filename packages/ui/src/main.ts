@@ -1,6 +1,8 @@
 import { App } from 'vue'
 import './index.css'
 import Plugin from './plugin'
+
+import BaseAlert from './components/BaseAlert/BaseAlert.vue'
 import BaseAvatar from './components/BaseAvatar/BaseAvatar.vue'
 import BaseAvatarGroup from './components/BaseAvatar/BaseAvatarGroup.vue'
 import BaseBadge from './components/BaseBadge/BaseBadge.vue'
@@ -21,6 +23,7 @@ const defaultOptions: AppOptions = {
 }
 
 const components = {
+  BaseAlert,
   BaseAvatar,
   BaseAvatarGroup,
   BaseBadge,
@@ -45,6 +48,7 @@ export default (app: App, options: AppOptions) => {
 }
 
 export {
+  BaseAlert,
   BaseAvatar,
   BaseAvatarGroup,
   BaseBadge,
