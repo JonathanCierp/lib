@@ -49,7 +49,7 @@ const props = withDefaults(defineProps<BaseAvatarProps>(), {
   roundedFull: true,
   size: 'md',
 })
-const slots = useSlots()
+const slots: any = useSlots()
 
 const placeholderClass = computed(() =>
   props.placeholder ? ' bg-gray-100 dark:bg-gray-600' : ''

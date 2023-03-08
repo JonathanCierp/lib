@@ -1,6 +1,6 @@
 <template>
   <div class="inline">
-    <Component :is="iconName" :style="[iconSize]" />
+    <Component :is="iconName" :style="[iconSize]" class="shrink-0" />
   </div>
 </template>
 

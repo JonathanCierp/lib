@@ -4,7 +4,8 @@
 - [ ] Test
 - [ ] Add animations on colors etc...
 
-- [ ] Accordion
+- [x] Accordion
+    - [x] Multiple
 - [x] Alert
     - [x] Bordered
     - [x] Outlined

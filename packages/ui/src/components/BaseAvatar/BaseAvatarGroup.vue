@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<BaseAvatarProps>(), {
   total: 0,
 })
 
-const slots = useSlots()
+const slots: any = useSlots()
 
 const components = computed(() => {
   if (slots.default) {

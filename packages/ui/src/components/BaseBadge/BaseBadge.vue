@@ -8,21 +8,6 @@
       <slot v-if="!props.dot" name="content">{{ content }}</slot>
     </span>
   </div>
-  <!--  <div class="relative">-->
-  <!--    <span-->
-  <!--      class="top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"-->
-  <!--    ></span>-->
-  <!--  </div>-->
-  <!--  <br />-->
-  <!--  <div class="relative w-fit">-->
-  <!--    <slot />-->
-  <!--    <span-->
-  <!--      class="absolute bottom-0 left-8 transform translate-y-1/4 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"-->
-  <!--      :class="[sizeClass]"-->
-  <!--    >-->
-  <!--      <slot v-if="!props.dot" name="content">{{ content }}</slot>-->
-  <!--    </span>-->
-  <!--  </div>-->
 </template>
 
 <script setup lang="ts">

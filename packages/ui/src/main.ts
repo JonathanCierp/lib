@@ -3,6 +3,8 @@ import './index.css'
 import './components/BaseAnimation/BaseAnimation.css'
 import Plugin from './plugin'
 
+import BaseAccordion from './components/BaseAccordion/BaseAccordion.vue'
+import BaseAccordionTab from './components/BaseAccordion/BaseAccordionTab.vue'
 import BaseAlert from './components/BaseAlert/BaseAlert.vue'
 import BaseAnimation from './components/BaseAnimation/BaseAnimation.vue'
 import BaseAvatar from './components/BaseAvatar/BaseAvatar.vue'
@@ -25,6 +27,8 @@ const defaultOptions: AppOptions = {
 }
 
 const components = {
+  BaseAccordion,
+  BaseAccordionTab,
   BaseAlert,
   BaseAnimation,
   BaseAvatar,
@@ -51,6 +55,8 @@ export default (app: App, options: AppOptions) => {
 }
 
 export {
+  BaseAccordion,
+  BaseAccordionTab,
   BaseAlert,
   BaseAnimation,
   BaseAvatar,
