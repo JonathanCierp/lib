@@ -11,6 +11,7 @@ import BaseAvatar from './components/BaseAvatar/BaseAvatar.vue'
 import BaseAvatarGroup from './components/BaseAvatar/BaseAvatarGroup.vue'
 import BaseBadge from './components/BaseBadge/BaseBadge.vue'
 import BaseButton from './components/BaseButton/BaseButton.vue'
+import BaseCarousel from './components/BaseCarousel/BaseCarousel.vue'
 import BaseIcon from './components/BaseIcon/BaseIcon.vue'
 import BaseTag from './components/BaseTag/BaseTag.vue'
 
@@ -35,6 +36,7 @@ const components = {
   BaseAvatarGroup,
   BaseBadge,
   BaseButton,
+  BaseCarousel,
   BaseIcon,
   BaseTag,
 }
@@ -63,6 +65,7 @@ export {
   BaseAvatarGroup,
   BaseBadge,
   BaseButton,
+  BaseCarousel,
   BaseIcon,
   BaseTag,
   Plugin,

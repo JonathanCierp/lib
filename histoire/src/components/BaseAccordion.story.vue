@@ -45,17 +45,6 @@
       </template>
 
       <template #controls="{ state }">
-        <!--        <HstSelect-->
-        <!--            v-model="state.color"-->
-        <!--            title="Color"-->
-        <!--            :options="[-->
-        <!--            { value: 'default', label: 'default' },-->
-        <!--            { value: 'success', label: 'success' },-->
-        <!--            { value: 'error', label: 'error' },-->
-        <!--            { value: 'info', label: 'info' },-->
-        <!--            { value: 'warning', label: 'warning' },-->
-        <!--          ]"-->
-        <!--        />-->
         <HstText v-model.number="state.activeIndex" title="ActiveIndex" readonly/>
         <HstCheckbox v-model="state.multiple" title="Multiple"/>
         <HstCheckbox v-model="state.flush" title="Flush"/>

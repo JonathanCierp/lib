@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import { COLORS, colors } from './BaseAlert'
 
 interface BaseAlertProps {
@@ -62,5 +62,4 @@ const accentClass = computed(() =>
   props.accent ? colors[props.color].accent : ''
 )
 const roundedClass = computed(() => (props.rounded ? 'rounded-lg' : ''))
-const showAlert = computed(() => props.modelValue)
 </script>

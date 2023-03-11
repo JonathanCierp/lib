@@ -27,6 +27,7 @@
     - [x] Add iconLeft & iconRight components instead of plain svg
     - [ ] Add loading component and pass the color of button
     - [ ] Extract SIZES & COLORS from BaseButton.ts
+- [x] Carousel
 - [ ] Card
     - [ ] Slot title
     - [ ] Slot content
