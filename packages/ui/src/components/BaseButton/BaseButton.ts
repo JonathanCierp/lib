@@ -1,3 +1,11 @@
+enum COLORS {
+  default = 'default',
+  success = 'success',
+  error = 'error',
+  info = 'info',
+  warning = 'warning',
+}
+
 enum SIZES {
   xxs = 'xxs',
   xs = 'xs',
@@ -5,41 +13,6 @@ enum SIZES {
   md = 'md',
   lg = 'lg',
   xl = 'xl',
-}
-
-const sizes = {
-  xxs: {
-    base: 'p-1.5 text-xs font-medium',
-    icon: 0.875,
-  },
-  xs: {
-    base: 'py-2 px-3 text-xs font-medium',
-    icon: 0.875,
-  },
-  sm: {
-    base: 'py-2 px-3 text-sm font-medium',
-    icon: 1,
-  },
-  md: {
-    base: 'py-2.5 px-5 text-sm font-medium',
-    icon: 1.25,
-  },
-  lg: {
-    base: 'py-3 px-5 text-base font-medium',
-    icon: 1.25,
-  },
-  xl: {
-    base: 'py-3.5 px-6 text-base font-medium',
-    icon: 1.5,
-  },
-}
-
-enum COLORS {
-  default = 'default',
-  success = 'success',
-  error = 'error',
-  info = 'info',
-  warning = 'warning',
 }
 
 const colors = {
@@ -75,4 +48,31 @@ const colors = {
   },
 }
 
-export { SIZES, sizes, COLORS, colors }
+const sizes = {
+  xxs: {
+    base: 'p-1.5 text-xs font-medium',
+    icon: 0.875,
+  },
+  xs: {
+    base: 'py-2 px-3 text-xs font-medium',
+    icon: 0.875,
+  },
+  sm: {
+    base: 'py-2 px-3 text-sm font-medium',
+    icon: 1,
+  },
+  md: {
+    base: 'py-2.5 px-5 text-sm font-medium',
+    icon: 1.25,
+  },
+  lg: {
+    base: 'py-3 px-5 text-base font-medium',
+    icon: 1.25,
+  },
+  xl: {
+    base: 'py-3.5 px-6 text-base font-medium',
+    icon: 1.5,
+  },
+}
+
+export { COLORS, SIZES, colors, sizes }

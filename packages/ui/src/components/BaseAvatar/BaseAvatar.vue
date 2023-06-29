@@ -34,7 +34,7 @@
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { sizes } from './BaseAvatar'
+import { SIZES, sizes } from './BaseAvatar'
 
 interface BaseAvatarProps {
   placeholder?: boolean
@@ -47,7 +47,7 @@ const props = withDefaults(defineProps<BaseAvatarProps>(), {
   placeholder: false,
   rounded: false,
   roundedFull: true,
-  size: 'md',
+  size: SIZES.md,
 })
 const slots: any = useSlots()
 
@@ -72,7 +72,7 @@ const content = computed(() => {
           .default()[0]
           .children?.toString()
           .split(' ')
-          .filter((v) => !!v) || []
+          .filter((v: any) => !!v) || []
       : []
 
     return letters?.length > 1

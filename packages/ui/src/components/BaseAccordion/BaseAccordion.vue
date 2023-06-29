@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref, useSlots, watch } from 'vue'
+import type { TabEvent } from './BaseAccordion'
 
 interface BaseAccordionTabProps {
   multiple?: boolean
@@ -27,10 +28,7 @@ interface BaseAccordionTabProps {
   flush?: boolean
 }
 
-interface TabEvent {
-  originalEvent: Event
-  index: number | number[] | null
-}
+const slots: any = useSlots()
 
 const props = withDefaults(defineProps<BaseAccordionTabProps>(), {
   multiple: false,
@@ -39,8 +37,6 @@ const props = withDefaults(defineProps<BaseAccordionTabProps>(), {
   expandIcon: 'chevron-down',
   flush: false,
 })
-
-const slots: any = useSlots()
 
 const emit = defineEmits(['update:active-index', 'tab-open', 'tab-close'])
 

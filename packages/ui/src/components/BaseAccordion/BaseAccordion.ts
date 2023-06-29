@@ -1,3 +1,8 @@
+interface TabEvent {
+  originalEvent: Event
+  index: number | number[] | null
+}
+
 const colors = {
   header: {
     base: 'text-gray-500 border border-gray-200 focus:ring-gray-200 dark:focus:ring-gray-800 hover:bg-gray-100 dark:text-gray-400 focus:ring-1 dark:border-gray-700 dark:hover:bg-gray-800',
@@ -14,4 +19,5 @@ const colors = {
   },
 }
 
+export type { TabEvent }
 export { colors }

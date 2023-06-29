@@ -58,7 +58,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import BaseIcon from '../BaseIcon/BaseIcon.vue'
-import { SIZES, sizes, COLORS, colors } from './BaseButton'
+import { SIZES, COLORS, sizes, colors } from './BaseButton'
 
 interface BaseButtonProps {
   label?: string

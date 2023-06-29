@@ -23,6 +23,7 @@
 - [x] Avatar Group
     - [x] Max
 - [x] Badge
+    - [ ] ADD OTHER POSITIONS
 - [x] Button
     - [x] Add iconLeft & iconRight components instead of plain svg
     - [ ] Add loading component and pass the color of button
